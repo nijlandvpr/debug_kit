@@ -406,7 +406,7 @@ DEBUGKIT.Util.Cookie = function () {
 			var date = new Date();
 			date.setTime(date.getTime() + (cookieLife * 24 * 60 * 60 * 1000));
 			var expires = '; expires=' + date.toGMTString();
-			document.cookie = name + '=' + value + expires + '; path=/';
+			document.cookie = name + '=' + value + expires + '; path=/; sameSite=strict';
 			return true;
 		},
 
